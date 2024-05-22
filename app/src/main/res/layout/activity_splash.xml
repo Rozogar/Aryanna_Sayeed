@@ -7,4 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.theme.Splash">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="189dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>
