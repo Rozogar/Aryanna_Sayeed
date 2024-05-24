@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">آریانا</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="afghan_pesarak">افغان پسرک</string>
+    <string name="anar">انار</string>
+    <string name="Atan">آتن</string>
+    <string name="Babak_Dandan">بابک دندان</string>
+    <string name="Bache_kabul">بچه کابل</string>
+    <string name="Be_Tu">بی تو</string>
+    <string name="Bi_Aaghosh_e_Tu">بی آغوش تو</string>
+    <string name="Biya_Biya">بیا بیا</string>
+    <string name="Byaa_Ka_De_Baregi">آهنگ آروم پشتو</string>
+    <string name="Chera_Chera">چرا چرا</string>
+    <string name="Chi_Didi">چه دیدی</string>
+    <string name="Dar_Qalbe_Kabul">در قلب کابل</string>
+    <string name="Dilam_Tang_Ast">دلم تنگ است</string>
+    <string name="Gola_Bordem">گله بوردیم</string>
+    <string name="Guitar">گیتار</string>
+    <string name="Gulfam">آهنگ پشتو</string>
+    <string name="Habibi">حبیبی</string>
+    <string name="Hairanam">حیرانم</string>
+    <string name="Hazargi">هزارگی</string>
+    <string name="Jelwa">جلوه</string>
+    <string name="Kabul_Zeba">کابل زیبا</string>
+    <string name="Kamak_Kamak">کمکمک</string>
+    <string name="Lahza_Haa">لحظه ها</string>
+    <string name="Laily_Jan">لیلی جان</string>
+    <string name="Mader_e_Afghan">مارد افغان</string>
+    <string name="Maida_Maida">میده میده</string>
+    <string name="Man_Amadeam">من آمده ام</string>
+    <string name="Mashallah">ماشآالله</string>
+    <string name="modati_shod_ka_tora">مدتی شد که تورا</string>
+    <string name="musafir">مسافر</string>
+    <string name="nafasam">نفس</string>
+    <string name="Ogora_Ta_Maata">آهنگ پشتو</string>
+    <string name="pa_ashiqi">آهنگ پشتو در عاشقی</string>
+    <string name="Parande_Mohabbat_LIve">پرنده محبت</string>
+    <string name="Pashto_Mashup">یار نادان</string>
+    <string name="Pashto_Melody">ملودی پشتو</string>
+    <string name="Qarsak">قرصک</string>
+    <string name="Saat_e_Brand">ساعت برند</string>
+    <string name="Tasmim">تصمیم</string>
+    <string name="Toba_Toba">توبه توبه</string>
+    <string name="Tu_Behtarin_Yaar">تو بهترین یاری</string>
+    <string name="Yaar_e_Bamyani">یار بامیانی</string>
+    <string name="Yallah_Yallah">یا الله یا الله</string>
+</resources>

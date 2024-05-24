@@ -1,5 +1,6 @@
 package com.rozogar.aryanna.ui.theme;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import com.rozogar.aryanna.R;
 public class Home extends AppCompatActivity {
 private Button btnSongs;
 private Button btnExit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,8 @@ private Button btnExit;
         btnSongs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(Home.this, Song_list.class);
+                startActivity(intent);
             }
         });
     }
