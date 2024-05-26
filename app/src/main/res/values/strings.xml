@@ -15,7 +15,7 @@
     <string name="Dilam_Tang_Ast">Dilam_Tang_Ast</string>
     <string name="Gola_Bordem">Gola_Bordem</string>
     <string name="Guitar">Guitar</string>
-    <string name="Gulfam">Guitar</string>
+    <string name="Gulfam">Gulfam</string>
     <string name="Habibi">Habibi</string>
     <string name="Hairanam">Hairanam</string>
     <string name="Hazargi">Hazargi</string>
@@ -43,4 +43,6 @@
     <string name="Tu_Behtarin_Yaar">Tu_Behtarin_Yaar</string>
     <string name="Yaar_e_Bamyani">Yaar_e_Bamyani</string>
     <string name="Yallah_Yallah">Yallah_Yallah</string>
+    <string name="songs">Songs</string>
+    <string name="exit">Exit</string>
 </resources>

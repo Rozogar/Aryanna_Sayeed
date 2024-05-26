@@ -39,6 +39,7 @@ private Button btnExit;
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, Song_list.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

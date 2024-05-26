@@ -1,7 +1,11 @@
 package com.rozogar.aryanna.ui.theme;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +20,7 @@ import java.util.ArrayList;
 public class Song_list extends AppCompatActivity {
 ArrayList<Music> music;
 private ListView list;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,11 +28,72 @@ private ListView list;
         setUPView();
         filling();
         adding();
+        topUp();
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Music clickedMusic = music.get(position);
+                Intent intent = new Intent(Song_list.this, Show.class);
+                intent.putExtra("clickedMusic", clickedMusic);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void topUp() {
+        music = new ArrayList<Music>();
+        music.add(new Music(R.drawable.a,getString(R.string.afghan_pesarak),R.raw.afghan_pesarak));
+        music.add(new Music(R.drawable.b,getString(R.string.anar),R.raw.anar));
+        music.add(new Music(R.drawable.c,getString(R.string.Atan), R.raw.atan));
+        music.add(new Music(R.drawable.d,getString(R.string.Babak_Dandan),R.raw.babak_dandan));
+        music.add(new Music(R.drawable.e,getString(R.string.Bache_kabul),R.raw.bache_kabul));
+        music.add(new Music(R.drawable.f,getString(R.string.Be_Tu),R.raw.be_tu));
+        music.add(new Music(R.drawable.g,getString(R.string.Bi_Aaghosh_e_Tu),R.raw.bi_aaghosh_e_tu));
+        music.add(new Music(R.drawable.h,getString(R.string.Biya_Biya),R.raw.biya_biya));
+        music.add(new Music(R.drawable.i,getString(R.string.Byaa_Ka_De_Baregi),R.raw.byaa_ka_de_baregi));
+        music.add(new Music(R.drawable.j,getString(R.string.Chera_Chera),R.raw.chera_chera));
+        music.add(new Music(R.drawable.k,getString(R.string.Chi_Didi),R.raw.chi_didi));
+        music.add(new Music(R.drawable.l,getString(R.string.Dar_Qalbe_Kabul),R.raw.dar_qalbe_kabul));
+        music.add(new Music(R.drawable.m,getString(R.string.Dilam_Tang_Ast),R.raw.dilam_tang_ast));
+        music.add(new Music(R.drawable.n,getString(R.string.Gola_Bordem),R.raw.gole_bordem));
+        music.add(new Music(R.drawable.o,getString(R.string.Guitar),R.raw.guitar));
+        music.add(new Music(R.drawable.p,getString(R.string.Gulfam),R.raw.gulfam));
+        music.add(new Music(R.drawable.q,getString(R.string.Habibi),R.raw.habibi));
+        music.add(new Music(R.drawable.r,getString(R.string.Hairanam),R.raw.hairanam));
+        music.add(new Music(R.drawable.s,getString(R.string.Hazargi),R.raw.hazargi));
+        music.add(new Music(R.drawable.t,getString(R.string.Jelwa),R.raw.jelwa));
+        music.add(new Music(R.drawable.u,getString(R.string.Kabul_Zeba),R.raw.kabul_zeba));
+        music.add(new Music(R.drawable.v,getString(R.string.Kamak_Kamak),R.raw.kamak_kamak));
+        music.add(new Music(R.drawable.w,getString(R.string.Lahza_Haa),R.raw.lahza_haa));
+        music.add(new Music(R.drawable.x,getString(R.string.Laily_Jan),R.raw.laily_jaan));
+        music.add(new Music(R.drawable.y,getString(R.string.Mader_e_Afghan),R.raw.madar_e_afghan));
+        music.add(new Music(R.drawable.z,getString(R.string.Maida_Maida),R.raw.maida_maida));
+        music.add(new Music(R.drawable.aa,getString(R.string.Man_Amadeam),R.raw.man_amadeam));
+        music.add(new Music(R.drawable.bb,getString(R.string.Mashallah),R.raw.mashallah));
+        music.add(new Music(R.drawable.cc,getString(R.string.modati_shod_ka_tora),R.raw.modati_shod_ka_tora));
+        music.add(new Music(R.drawable.dd,getString(R.string.musafir),R.raw.musafir));
+        music.add(new Music(R.drawable.ee,getString(R.string.nafasam),R.raw.nafasam));
+        music.add(new Music(R.drawable.ff,getString(R.string.Ogora_Ta_Maata),R.raw.ogora_ta_maata));
+        music.add(new Music(R.drawable.gg,getString(R.string.pa_ashiqi),R.raw.pa_ashiqi));
+        music.add(new Music(R.drawable.hh,getString(R.string.Parande_Mohabbat_LIve),R.raw.parande_mohabbat_live));
+        music.add(new Music(R.drawable.ii,getString(R.string.Pashto_Mashup),R.raw.pashto_mashup));
+        music.add(new Music(R.drawable.jj,getString(R.string.Pashto_Melody),R.raw.pashto_medley));
+        music.add(new Music(R.drawable.kk,getString(R.string.Qarsak),R.raw.qarsak));
+        music.add(new Music(R.drawable.ll,getString(R.string.Saat_e_Brand),R.raw.saat_e_brand));
+        music.add(new Music(R.drawable.mm,getString(R.string.Tasmim),R.raw.tasmim));
+        music.add(new Music(R.drawable.nn,getString(R.string.Toba_Toba),R.raw.toba_toba));
+        music.add(new Music(R.drawable.oo,getString(R.string.Tu_Behtarin_Yaar),R.raw.tu_behtarin_yaar));
+        music.add(new Music(R.drawable.pp,getString(R.string.Yaar_e_Bamyani),R.raw.yaar_e_bamyani));
+        music.add(new Music(R.drawable.a,getString(R.string.Yallah_Yallah),R.raw.yallah_yallah));
+
     }
 
     private void adding() {
-        MyAdapter adapter = new MyAdapter(Song_list.this,R.layout.pre_layout,music);
-        list.setAdapter(adapter);
+        if (music != null) {
+            MyAdapter adapter = new MyAdapter(Song_list.this, R.layout.pre_layout, music);
+            list.setAdapter(adapter);
+        }
     }
 
     private void filling() {
