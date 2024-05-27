@@ -5,7 +5,7 @@
     android:id="@+id/h_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9A0909"
+    android:background="#091C2C"
     tools:context=".ui.theme.Home">
 
     <Button
@@ -13,7 +13,7 @@
         android:layout_width="221dp"
         android:layout_height="56dp"
         android:layout_marginTop="236dp"
-        android:background="#03A9F4"
+        android:background="#CD481E"
         android:text="@string/songs"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +25,7 @@
         android:layout_width="221dp"
         android:layout_height="56dp"
         android:layout_marginTop="32dp"
-        android:background="#03A9F4"
+        android:background="#CD481E"
         android:text="@string/exit"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"

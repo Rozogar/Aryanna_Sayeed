@@ -35,7 +35,8 @@ private ListView list;
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Music clickedMusic = music.get(position);
                 Intent intent = new Intent(Song_list.this, Show.class);
-                intent.putExtra("clickedMusic", clickedMusic);
+                intent.putExtra("musicList", music);
+                intent.putExtra("currentIndex", position);
                 startActivity(intent);
             }
         });

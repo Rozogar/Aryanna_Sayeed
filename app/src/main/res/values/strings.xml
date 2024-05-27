@@ -45,4 +45,8 @@
     <string name="Yallah_Yallah">Yallah_Yallah</string>
     <string name="songs">Songs</string>
     <string name="exit">Exit</string>
+    <string name="privious">previous</string>
+    <string name="next">next</string>
+    <string name="play">play</string>
+    <string name="pause">pause</string>
 </resources>

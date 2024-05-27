@@ -46,4 +46,8 @@
     <string name="Yallah_Yallah">یا الله یا الله</string>
     <string name="songs">آهنگ ها</string>
     <string name="exit">خروج</string>
+    <string name="privious">قبلی</string>
+    <string name="next">بعدی</string>
+    <string name="play">پخش</string>
+    <string name="pause">توقف</string>
 </resources>

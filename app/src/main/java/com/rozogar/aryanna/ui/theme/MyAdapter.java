@@ -21,7 +21,8 @@ public class MyAdapter extends ArrayAdapter {
     private ArrayList<Music> song;
     private int resource;
     private Context context;
-    public MyAdapter( Context context, int resource, ArrayList<Music> song) {
+
+    public MyAdapter(Context context, int resource, ArrayList<Music> song) {
         super(context, resource, song);
         this.context = context;
         this.resource = resource;
@@ -46,7 +47,7 @@ public class MyAdapter extends ArrayAdapter {
 
     @NonNull
     @Override
-    public View getView(int position,  View convertView,  ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
@@ -76,10 +77,11 @@ public class MyAdapter extends ArrayAdapter {
 
 
         }
+
         public void filling(Music mm) {
             imge.setImageResource(mm.getImage());
             txt.setText(mm.getTxt().toString());
         }
 
-        }
     }
+}
