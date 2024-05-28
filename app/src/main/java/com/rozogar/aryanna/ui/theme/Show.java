@@ -96,6 +96,7 @@ private Button btnplay;
                         if (player != null) {
                             if (!player.isPlaying()) {
                                 playCurrentSong();
+
                             } else {
                                 player.pause();
                             }
@@ -113,6 +114,20 @@ private Button btnplay;
             player.setDataSource(Show.this, Uri.parse("android.resource://" + getPackageName() + "/" + ahang));
             player.prepare();
             player.start();
+            // Set a listener to play the next song when the current song finishes
+            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                @Override
+                public void onCompletion(MediaPlayer mp) {
+                    // Move to the next song
+                    currentIndex++;
+                    if (currentIndex >= musicList.size()) {
+                        currentIndex = 0; // Loop back to the beginning
+                    }
+                    updateUIWithCurrentSong();
+                    playCurrentSong();
+                }
+            });
+
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(Show.this, "Error playing music", Toast.LENGTH_SHORT).show();

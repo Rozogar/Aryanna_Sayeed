@@ -14,7 +14,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="52dp"
         android:layout_marginEnd="28dp"
-        android:background="#A81B1B"
+        android:background="#05589E"
         android:text="@string/privious"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/btnplay"
@@ -26,10 +26,23 @@
         android:layout_height="43dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="52dp"
-        android:background="#951616"
+        android:background="#05589E"
         android:text="@string/next"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/btnplay"
+        app:layout_constraintTop_toBottomOf="@+id/seek" />
+
+    <Button
+        android:id="@+id/btnplay"
+        android:layout_width="82dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="52dp"
+        android:background="#05589E"
+        android:text="Button"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seek" />
 
     <ImageView
@@ -47,7 +60,7 @@
         android:id="@+id/seek"
         android:layout_width="325dp"
         android:layout_height="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
@@ -57,24 +70,11 @@
         android:layout_width="299dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:background="#CF4747"
+        android:background="#091C2C"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img" />
-
-    <Button
-        android:id="@+id/btnplay"
-        android:layout_width="82dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="52dp"
-        android:background="#951616"
-        android:text="Button"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seek" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
