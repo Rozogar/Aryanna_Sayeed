@@ -49,7 +49,7 @@
         android:id="@+id/img"
         android:layout_width="337dp"
         android:layout_height="256dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="68dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,9 +58,13 @@
 
     <SeekBar
         android:id="@+id/seek"
-        android:layout_width="325dp"
-        android:layout_height="12dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="247dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="28dp"
+        android:background="#05589E"
+        android:foregroundTint="#D30E0E"
+        android:progress="0"
+        android:progressTint="#C33939"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
@@ -76,5 +80,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img" />
+
+    <TextView
+        android:id="@+id/txtstart"
+        android:layout_width="41dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/seek"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <TextView
+        android:id="@+id/txtendtime"
+        android:layout_width="41dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/seek"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

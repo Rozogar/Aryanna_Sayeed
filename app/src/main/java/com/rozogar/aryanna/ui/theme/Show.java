@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,9 +25,12 @@ private TextView txt1;
 private SeekBar seek;
 private Button btnpre;
 private Button btnnext;
+private TextView txtstart;
+private TextView txtendtime;
 private Button btnplay;
    private Intent intent;
     MediaPlayer player;
+    private Handler handler = new Handler();
     private ArrayList<Music> musicList;
     private int currentIndex = 0;
 
@@ -67,7 +71,7 @@ private Button btnplay;
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if (fromUser && player != null) {
                     player.seekTo(progress);
-                }
+                }    txtstart.setText(formatTime(progress));
             }
 
             @Override
@@ -136,6 +140,8 @@ private Button btnplay;
             player.start();
             btnplay.setText("Pause");
             seek.setMax(player.getDuration());
+            txtendtime.setText(formatTime(player.getDuration()));
+            updateSeekBar();
             // Set a listener to play the next song when the current song finishes
             player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -172,7 +178,27 @@ private Button btnplay;
         String musicName = currentSong.getTxt();
         img.setImageResource(imageResource);
         txt1.setText(musicName);
+        txtstart.setText(formatTime(0));
     }
+    private void updateSeekBar() {
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (player != null && player.isPlaying()) {
+                    seek.setProgress(player.getCurrentPosition());
+                    txtstart.setText(formatTime(player.getCurrentPosition()));
+                    updateSeekBar();
+                }
+            }
+        }, 1000);
+    }
+
+    private String formatTime(int milliseconds) {
+        int minutes = (milliseconds / 1000) / 60;
+        int seconds = (milliseconds / 1000) % 60;
+        return String.format("%02d:%02d", minutes, seconds);
+    }
+
 
 
     private void setUpView() {
@@ -182,6 +208,8 @@ private Button btnplay;
         btnnext = findViewById(R.id.btnpre);
         btnplay = findViewById(R.id.btnplay);
         btnpre = findViewById(R.id.btnpree);
+        txtstart = findViewById(R.id.txtstart);
+        txtendtime = findViewById(R.id.txtendtime);
 
 
     }
