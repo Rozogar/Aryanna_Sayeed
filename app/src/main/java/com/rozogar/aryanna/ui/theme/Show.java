@@ -52,6 +52,7 @@ private Button btnplay;
                 setUpPlayButton();
                 setUpNextButton();
                 setUpPreviousButton();
+                setUpSeekBar();
                 playCurrentSong();
             } else {
                 Toast.makeText(this, "Music list is empty or null", Toast.LENGTH_SHORT).show();
@@ -59,6 +60,23 @@ private Button btnplay;
         }
 
         }
+
+    private void setUpSeekBar() {
+        seek.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (fromUser && player != null) {
+                    player.seekTo(progress);
+                }
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {}
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+    }
 
     private void setUpPreviousButton() {
         btnpre.setOnClickListener(new View.OnClickListener() {
@@ -96,9 +114,11 @@ private Button btnplay;
                         if (player != null) {
                             if (!player.isPlaying()) {
                                 playCurrentSong();
+                                btnplay.setText("Pause");
 
                             } else {
                                 player.pause();
+                                btnplay.setText("Play");
                             }
                         }
                     }
@@ -114,6 +134,8 @@ private Button btnplay;
             player.setDataSource(Show.this, Uri.parse("android.resource://" + getPackageName() + "/" + ahang));
             player.prepare();
             player.start();
+            btnplay.setText("Pause");
+            seek.setMax(player.getDuration());
             // Set a listener to play the next song when the current song finishes
             player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                 @Override
@@ -127,6 +149,16 @@ private Button btnplay;
                     playCurrentSong();
                 }
             });
+            new Thread(() -> {
+                while (player != null && player.isPlaying()) {
+                    seek.setProgress(player.getCurrentPosition());
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
 
         } catch (IOException e) {
             e.printStackTrace();

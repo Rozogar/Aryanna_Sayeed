@@ -38,7 +38,7 @@
         android:layout_height="44dp"
         android:layout_marginTop="52dp"
         android:background="#05589E"
-        android:text="Button"
+        android:text="play"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -67,9 +67,9 @@
 
     <TextView
         android:id="@+id/txt1"
-        android:layout_width="299dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="277dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
         android:background="#091C2C"
         android:textAlignment="center"
         android:textSize="20sp"
