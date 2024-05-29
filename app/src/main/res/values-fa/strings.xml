@@ -50,4 +50,13 @@
     <string name="next">بعدی</string>
     <string name="play">پخش</string>
     <string name="pause">توقف</string>
+    <string name="hemat_kon">همت کن</string>
+    <string name="labkhand">لبخند بزن</string>
+    <string name="lanat">لعنت</string>
+    <string name="majlisi">شاد مجلسی</string>
+    <string name="majlisi1">شاد مجلسی 1</string>
+    <string name="mosha">موشه نموشه</string>
+    <string name="baby">عزیزم</string>
+    <string name="bannamak">با نمک</string>
+    <string name="qarsakipanshir">قرصک پنحشیر</string>
 </resources>
