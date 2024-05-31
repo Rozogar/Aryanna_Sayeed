@@ -49,7 +49,7 @@
     <string name="next">next</string>
     <string name="play">play</string>
     <string name="pause">pause</string>
-    <string name="hemat_kon">Hemat_KOn</string>
+    <string name="hemat_kon">Hemat_Kon</string>
     <string name="labkhand">Labkhand Bezan</string>
     <string name="lanat">Lanat</string>
     <string name="majlisi">Shadi Majlisi</string>
@@ -58,4 +58,6 @@
     <string name="baby">Baby</string>
     <string name="bannamak">Ba Namak</string>
     <string name="qarsakipanshir">Qarsaki Panshir</string>
+    <string name="pauses">Pause</string>
+    <string name="playy">Play</string>
 </resources>

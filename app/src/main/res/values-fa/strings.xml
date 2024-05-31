@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">آریانا</string>
+    <string name="app_name">آریانا سعید</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="afghan_pesarak">افغان پسرک</string>
     <string name="anar">انار</string>
@@ -13,7 +13,6 @@
     <string name="Chera_Chera">چرا چرا</string>
     <string name="Chi_Didi">چه دیدی</string>
     <string name="Dar_Qalbe_Kabul">در قلب کابل</string>
-    <string name="Dilam_Tang_Ast">دلم تنگ است</string>
     <string name="Gola_Bordem">گله بوردیم</string>
     <string name="Guitar">گیتار</string>
     <string name="Gulfam">آهنگ پشتو</string>
@@ -22,7 +21,7 @@
     <string name="Hazargi">هزارگی</string>
     <string name="Jelwa">جلوه</string>
     <string name="Kabul_Zeba">کابل زیبا</string>
-    <string name="Kamak_Kamak">کمکمک</string>
+    <string name="Kamak_Kamak">کمک کمک</string>
     <string name="Lahza_Haa">لحظه ها</string>
     <string name="Laily_Jan">لیلی جان</string>
     <string name="Mader_e_Afghan">مارد افغان</string>
@@ -59,4 +58,6 @@
     <string name="baby">عزیزم</string>
     <string name="bannamak">با نمک</string>
     <string name="qarsakipanshir">قرصک پنحشیر</string>
+    <string name="pauses">توقف</string>
+    <string name="playy">پخش</string>
 </resources>

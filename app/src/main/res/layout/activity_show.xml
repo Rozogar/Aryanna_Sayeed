@@ -58,8 +58,8 @@
 
     <SeekBar
         android:id="@+id/seek"
-        android:layout_width="247dp"
-        android:layout_height="6dp"
+        android:layout_width="242dp"
+        android:layout_height="8dp"
         android:layout_marginTop="28dp"
         android:background="#05589E"
         android:foregroundTint="#D30E0E"
@@ -76,6 +76,7 @@
         android:layout_marginTop="24dp"
         android:background="#091C2C"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -102,5 +103,19 @@
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/seek"
         app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="223dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="Programer: A_Ziaeii"
+        android:textColor="#03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnpree"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -33,6 +33,8 @@ private Button btnplay;
     private Handler handler = new Handler();
     private ArrayList<Music> musicList;
     private int currentIndex = 0;
+    private int playButtonClickCount = 1;
+    private int pausedPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,22 +113,30 @@ private Button btnplay;
     }
 
     private void setUpPlayButton() {
-
-                btnplay.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if (player != null) {
-                            if (!player.isPlaying()) {
-                                playCurrentSong();
-                                btnplay.setText("Pause");
-
-                            } else {
-                                player.pause();
-                                btnplay.setText("Play");
-                            }
+        btnplay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (player != null) {
+                    playButtonClickCount++;
+                    if (playButtonClickCount == 3) {
+                        // Resume the song from the paused position
+                        player.seekTo(pausedPosition);
+                        player.start();
+                        btnplay.setText(R.string.pauses);
+                        playButtonClickCount = 1; // Reset the counter
+                    } else {
+                        if (!player.isPlaying()) {
+                            playCurrentSong();
+                            btnplay.setText(R.string.pauses);
+                        } else {
+                            pausedPosition = player.getCurrentPosition();
+                            player.pause();
+                            btnplay.setText(R.string.playy);
                         }
                     }
-                });
+                }
+            }
+        });
     }
 
 
@@ -138,7 +148,7 @@ private Button btnplay;
             player.setDataSource(Show.this, Uri.parse("android.resource://" + getPackageName() + "/" + ahang));
             player.prepare();
             player.start();
-            btnplay.setText("Pause");
+            btnplay.setText(R.string.pauses);
             seek.setMax(player.getDuration());
             txtendtime.setText(formatTime(player.getDuration()));
             updateSeekBar();
@@ -165,7 +175,6 @@ private Button btnplay;
                     }
                 }
             }).start();
-
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(Show.this, "Error playing music", Toast.LENGTH_SHORT).show();
@@ -212,7 +221,15 @@ private Button btnplay;
         txtendtime = findViewById(R.id.txtendtime);
 
 
+    }@Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (player != null) {
+            player.release();
+            player = null;
+        }
     }
+
 
 
 }
