@@ -42,7 +42,7 @@ private Button btnplay;
         setContentView(R.layout.activity_show);
         setUpView();
         adjusting();
-
+       
 
     }
 
@@ -148,7 +148,7 @@ private Button btnplay;
             player.setDataSource(Show.this, Uri.parse("android.resource://" + getPackageName() + "/" + ahang));
             player.prepare();
             player.start();
-            btnplay.setText(R.string.pauses);
+            btnplay.setText("Pause");
             seek.setMax(player.getDuration());
             txtendtime.setText(formatTime(player.getDuration()));
             updateSeekBar();
@@ -175,6 +175,7 @@ private Button btnplay;
                     }
                 }
             }).start();
+
         } catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(Show.this, "Error playing music", Toast.LENGTH_SHORT).show();
@@ -221,15 +222,7 @@ private Button btnplay;
         txtendtime = findViewById(R.id.txtendtime);
 
 
-    }@Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (player != null) {
-            player.release();
-            player = null;
-        }
     }
-
 
 
 }
