@@ -122,12 +122,11 @@ private Button btnplay;
                         // Resume the song from the paused position
                         player.seekTo(pausedPosition);
                         player.start();
-                        btnplay.setText(R.string.pauses);
+                        btnplay.setText(R.string.pause);
                         playButtonClickCount = 1; // Reset the counter
                     } else {
                         if (!player.isPlaying()) {
                             playCurrentSong();
-                            btnplay.setText(R.string.pauses);
                         } else {
                             pausedPosition = player.getCurrentPosition();
                             player.pause();
@@ -148,7 +147,7 @@ private Button btnplay;
             player.setDataSource(Show.this, Uri.parse("android.resource://" + getPackageName() + "/" + ahang));
             player.prepare();
             player.start();
-            btnplay.setText("Pause");
+            btnplay.setText(R.string.pausee);
             seek.setMax(player.getDuration());
             txtendtime.setText(formatTime(player.getDuration()));
             updateSeekBar();
@@ -215,7 +214,7 @@ private Button btnplay;
         img = findViewById(R.id.img);
         txt1 =findViewById(R.id.txt1);
         seek = findViewById(R.id.seek);
-        btnnext = findViewById(R.id.btnpre);
+        btnnext = findViewById(R.id.btnnext);
         btnplay = findViewById(R.id.btnplay);
         btnpre = findViewById(R.id.btnpree);
         txtstart = findViewById(R.id.txtstart);

@@ -58,6 +58,8 @@
     <string name="baby">عزیزم</string>
     <string name="bannamak">با نمک</string>
     <string name="qarsakipanshir">قرصک پنحشیر</string>
-    <string name="pauses">توقف</string>
     <string name="playy">پخش</string>
+    <string name="playfirst">پخش</string>
+
+    <string name="pausee">توقف</string>
 </resources>

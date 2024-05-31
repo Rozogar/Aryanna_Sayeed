@@ -58,6 +58,8 @@
     <string name="baby">Baby</string>
     <string name="bannamak">Ba Namak</string>
     <string name="qarsakipanshir">Qarsaki Panshir</string>
-    <string name="pauses">Pause</string>
     <string name="playy">Play</string>
+    <string name="playfirst">play</string>
+
+    <string name="pausee">Pause</string>
 </resources>
