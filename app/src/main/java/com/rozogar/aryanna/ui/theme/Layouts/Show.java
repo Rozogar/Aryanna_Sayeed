@@ -1,4 +1,4 @@
-package com.rozogar.aryanna.ui.theme;
+package com.rozogar.aryanna.ui.theme.Layouts;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -15,6 +15,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.rozogar.aryanna.R;
+import com.rozogar.aryanna.ui.theme.SourceClasses.MediaPlayerManager;
+import com.rozogar.aryanna.ui.theme.SourceClasses.Music;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -5,7 +5,7 @@
     android:id="@+id/h_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.theme.Splash"
+    tools:context=".ui.theme.Layouts.Splash"
     android:layout_above="@+id/showFragment"
     android:background="@color/black"
     >

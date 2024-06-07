@@ -1,4 +1,4 @@
-package com.rozogar.aryanna.ui.theme
+package com.rozogar.aryanna.ui.theme.KotlinFiles
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,16 +1,15 @@
-package com.rozogar.aryanna.ui.theme;
+package com.rozogar.aryanna.ui.theme.Adapter;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.rozogar.aryanna.R;
+import com.rozogar.aryanna.ui.theme.SourceClasses.Music;
 
 import java.util.ArrayList;
 
@@ -50,8 +49,8 @@ public class MyAdapter extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder holder;
         if (convertView == null) {
-            LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(resource, parent, false);
+
+            convertView = LayoutInflater.from(context).inflate(resource, parent, false);
             holder = new ViewHolder(convertView);
 
             convertView.setTag(holder);

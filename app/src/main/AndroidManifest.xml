@@ -4,28 +4,28 @@
 
     <application
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/icon_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Aryanna"
         tools:targetApi="31">
         <activity
-            android:name=".ui.theme.Show"
+            android:name=".ui.theme.Layouts.Show"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.theme.Song_list"
+            android:name=".ui.theme.Layouts.Song_list"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.theme.Home"
+            android:name=".ui.theme.Layouts.Home"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".ui.theme.Splash"
+            android:name=".ui.theme.Layouts.Splash"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>

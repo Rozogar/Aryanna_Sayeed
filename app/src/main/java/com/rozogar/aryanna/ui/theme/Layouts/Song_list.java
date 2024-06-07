@@ -1,19 +1,16 @@
-package com.rozogar.aryanna.ui.theme;
+package com.rozogar.aryanna.ui.theme.Layouts;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.rozogar.aryanna.R;
+import com.rozogar.aryanna.ui.theme.Adapter.MyAdapter;
+import com.rozogar.aryanna.ui.theme.SourceClasses.Music;
 
 import java.util.ArrayList;
 

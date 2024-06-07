@@ -1,6 +1,5 @@
-package com.rozogar.aryanna.ui.theme
+package com.rozogar.aryanna.ui.theme.KotlinFiles
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

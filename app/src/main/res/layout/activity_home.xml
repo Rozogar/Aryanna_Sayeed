@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#091C2C"
-    tools:context=".ui.theme.Home">
+    tools:context=".ui.theme.Layouts.Home">
 
     <Button
         android:id="@+id/btnSongs"
