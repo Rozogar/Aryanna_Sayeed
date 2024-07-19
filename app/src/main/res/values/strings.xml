@@ -62,4 +62,6 @@
     <string name="playfirst">play</string>
 
     <string name="pausee">Pause</string>
+    <string name="about">About</string>
+    <string name="welcome_have_fun">Welcome, have fun...</string>
 </resources>

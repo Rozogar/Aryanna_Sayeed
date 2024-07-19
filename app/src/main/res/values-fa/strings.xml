@@ -62,4 +62,6 @@
     <string name="playfirst">پخش</string>
 
     <string name="pausee">توقف</string>
+    <string name="about">About</string>
+    <string name="welcome_have_fun">خوش آمدید، لذت ببرید...</string>
 </resources>

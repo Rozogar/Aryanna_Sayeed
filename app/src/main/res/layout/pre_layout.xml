@@ -4,7 +4,7 @@
     android:id="@+id/pre_id"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:background="#091C2C"
+    android:background="#376447"
     android:padding="5dp">
 
     <ImageView
@@ -25,7 +25,7 @@
         android:layout_marginStart="26dp"
         android:layout_marginTop="31dp"
         android:layout_toEndOf="@+id/image"
-        android:background="#091C2C"
+        android:background="#682011"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp" />

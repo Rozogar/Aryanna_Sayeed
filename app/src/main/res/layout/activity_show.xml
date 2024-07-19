@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#091C2C"
+    android:background="@drawable/forest"
     tools:context=".ui.theme.Layouts.Show">
 
     <Button
@@ -77,7 +77,7 @@
         android:layout_width="277dp"
         android:layout_height="36dp"
         android:layout_marginTop="24dp"
-        android:background="#091C2C"
+        android:background="#05589E"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
